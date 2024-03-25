@@ -1,0 +1,97 @@
+:root {
+    font-family: Impact, Arial, Helvetica, sans-serif;
+    font-size: 14px;
+}
+*{
+    box-sizing: border-box;
+}
+
+.wrapper {
+    
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
+    width: 100%;
+    margin: auto;
+    background-color: antiquewhite;
+}
+.feedback {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    max-width: 180px;
+    width: 100%;
+    padding: 1.4em;
+    border: 1px solid black;
+    border-radius: 16px;
+    background-color: #fff;
+}
+
+.comma {
+    width: 25px;
+    height: 25px;
+    position: relative;
+    border: none;
+    border-radius: 50%;
+}
+.comma::after {
+    content: "\201C";
+    position: absolute;
+    top: -50%;
+    left: 50%;
+    transform: translate(-50%, 50%);
+    font-size: 2em;
+    color: #fff;
+}
+.feedback:nth-child(odd) .comma{
+    background-color: #45bc8c;
+}
+.feedback:nth-child(odd) .feedback-author {
+    color: #45bc8c;
+}
+
+.feedback:nth-child(even) .comma{
+    background-color: #f7a1de;
+}
+.feedback:nth-child(even) .feedback-author{
+    color: #f7a1de;
+}
+.feedback-iteam {
+    flex-grow: 1;
+    line-height: 1.3;
+}
+.feedback-iteam::after {
+    content: " ";
+}
+.feetback-info {
+    text-align: end;
+}
+.feedback-author {
+    margin-top: 1.4em;
+    font-size: .8em;
+    font-weight: 600;
+    text-transform: capitalize;  
+}
+.feedback-speciality {  
+    font-size: 0.7em;
+    text-transform: capitalize;
+    margin: 0 0 10px 0;
+}
+.feedback-company {
+    text-align: center;
+    font-weight: 600;
+    
+}
+.icon {
+    position: relative;
+}
+.icon::before {
+    content: url('../assets/image/shield-star.svg');
+    position: absolute;
+    width: 20px;
+    left: 0;
+    top: 50%;
+    transform: translate(-100%, -50%);
+    
+}
